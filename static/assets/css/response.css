@@ -1,0 +1,44 @@
+@media (max-width: 900px) {
+
+    header {
+        padding: .8rem;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 0; right: 0; left: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 70vh;
+
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    }
+
+    header .navbar a {
+        display: block;
+        margin: 1rem 0;
+        color: #fff;
+    }
+
+    #menu{
+        display: flex;
+    }
+
+    #close{
+        display: none;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: transparent;
+        font-size: 1.3rem;
+    }
+
+}

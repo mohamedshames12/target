@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap');
+
+*{
+    margin: 0;padding: 0;
+    outline: none;
+    transition: all .3s linear;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+/* header */
+
+header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 1rem 8%;
+    position: fixed;
+    right: 0;left: 0;top: 0;
+}
+
+header img {
+    height: 1.6rem;
+}
+
+header .navbar a{
+    margin-left: 1rem;
+    color: #143642;
+}
+
+
+header .navbar a:hover{
+    color: #a62639;
+}
+
+header .chat {
+    background-color: #a62639;
+    color: #fff;
+    padding: .4rem 1.1rem;
+    border-radius: 7px;
+}
+
+header .chat:hover{
+    background-color: #962032;
+}
+
+#menu,
+#close {
+    padding: .4rem .6rem;
+    background-color: #d37684;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .4s linear;
+    color: #fff;
+    border: #a62639;
+    display: none;
+}
+
+#menu:hover{
+    background: #962032;
+    color: #fff;
+}
+
+/* home */
+
+section{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.home .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.home .box .image {
+    flex: 1;
+}
+
+.home .box .image img {
+    height: 35rem;
+    display: flex;
+    margin: auto;
+}
+
+.home .box .contect h1{
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+}
+
+.home .box .contect p{
+    width: 95%;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.home .box .contect a{
+    padding: 0.4rem 1.4rem;
+    background-color: #a62639;
+    border-radius: 5px;
+    color: #ffff;
+}
+
+.home .box .contect a:hover{
+    background-color: #962032;
+}
