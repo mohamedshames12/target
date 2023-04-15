@@ -89,6 +89,10 @@ section{
     margin: auto;
 }
 
+.home .box .contect{
+    flex: 1;
+}
+
 .home .box .contect h1{
     margin-bottom: .5rem;
     font-size: 2rem;
