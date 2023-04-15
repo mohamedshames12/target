@@ -116,3 +116,156 @@ section{
 .home .box .contect a:hover{
     background-color: #962032;
 }
+
+/* register */
+
+.sign .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.sign .container .form {
+    flex: 1;
+  
+}
+
+.sign .container .form form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: #eee;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.sign .container .form form h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #a62639;
+}
+
+.sign .container .form form label {
+    margin-bottom: .3rem;
+}
+
+.sign .container .form form input,
+.sign .container .form form select{
+    margin-bottom: .5rem;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 1rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.checkbox p {
+    margin-top: .9rem;
+}
+
+.checkbox a {
+    color: #962032;
+}
+
+.checkbox a:hover{
+    text-decoration: underline;
+}
+
+.btn-sign{
+    background: #a62639;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: .5rem;
+}
+
+.btn-sign:hover{
+    background-color: #962032;
+}
+
+
+/* Or continue with */
+
+.sign .container .form form .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sign .container .form form span {
+    border: 1px solid #ccc;
+    width: 25%;
+}
+
+.sign .container .form form .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: .8rem 0;
+}
+
+.sign .container .form form .icons i {
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+    padding: 0.3em .6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #d37684;
+}
+
+.sign .container .form form .icons i:hover{
+    color: #a62639;
+}
+
+.sign .container .contact-sign{
+    flex: 1;
+}
+
+.sign .container .contact-sign h1 {
+    font-size: 1.8rem;
+    color: #143642;
+    margin-bottom: 2rem;
+}
+
+.sign .container .contact-sign .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sign .container .contact-sign .flex img {
+    height: 10rem;
+}
+
+.sign .container .contact-sign .flex p {
+    font-size: 1.2rem;
+}
+
+.sign .container .contact-sign .flex a {
+    color: #962032;
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+.sign .container .contact-sign .flex a:hover{
+    text-decoration: underline;
+}
+
+/* message */
+
+.message{
+    text-align: center;
+    color: red;
+    background: #fff;
+    border-radius: 5px;
+}

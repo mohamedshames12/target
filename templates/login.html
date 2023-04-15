@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/response.css' %}" />
-    <title>Target || Regular</title>
+    <title>Target || Login</title>
   </head>
   <body>
     {% comment %} header {% endcomment %}
@@ -38,14 +38,12 @@
       <i class="fas fa-solid fa-xmark" id="close"></i>
     </header>
 
-
     <section class="sign">
-
       <div class="container">
         <div class="contact-sign">
           <h1>Designed for a more interesting world</h1>
           <div class="flex">
-            <p>Have an acount? <a href="/login"> Login Now </a></p>
+            <p> Don't have an acount? <a href="/register"> Register Now </a></p>
             <img
               src="{% static 'assets/images/sign/Character.png' %}"
               alt="sign"
@@ -53,49 +51,29 @@
           </div>
         </div>
         <div class="form">
-          <form method="POST">
-            {% csrf_token %}
-            <div class="message"> 
-              {% for message in messages %}
-                  <h4> {{ message }} </h4>
-              {% endfor %}
-            </div>
-            <h1>Registration</h1>
-            <label for="name">Name:</label>
-            <input type="text" name="name" required />
+          <form>
+            <h1>Logination</h1>
+        
 
             <label for="email">Email:</label>
-            <input type="email" name="email" required />
+            <input type="email" id="email" name="email" required />
 
             <label for="password">Password:</label>
-            <input type="password" name="password" required />
+            <input type="password" id="password" name="password" required />
 
-            <label for="confirm-password">Confirm Password:</label>
-            <input
-              type="password"
-              name="confirm-password"
-              required
-            />
-
-            <label for="gender">Gender:</label>
-            <select name="gender">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-            <div class="checkbox">
-               <input type="checkbox" name="checkbox"/>
-               <p>
-                By creating an account you agree to the
-                <a href="https://policies.google.com/terms"> terms of use </a>
-                and our
-                <a href="https://policies.google.com/privacy">
-                  Privacy Policy
-                </a>
-              </p>
+            <input type="submit" value="Login" class="btn-sign"/>
+            <div class="social">
+                <span>   </span> 
+                <p> Or continue with </p> 
+                <span>   </span> 
             </div>
-            <input type="submit" value="Register" class="btn-sign"/>
-          </form>
+            <div class="icons"> 
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-apple"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
         </div>
       </div>
     </section>

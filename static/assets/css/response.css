@@ -65,4 +65,34 @@
         letter-spacing: 0;
     }
 
+    .sign .container{
+        display: block;
+    }
+
+    .sign .container .form form {
+        width: 88%;
+    }
+    
+    .sign .container .contact-sign{
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .sign .container .contact-sign h1{
+        font-size: 1.1rem;
+    }
+
+    .sign .container .contact-sign .flex img {
+        height: 9rem;
+    }
+
+    .sign .container .contact-sign .flex p{
+        font-size: .9rem;
+    }
+
+    .sign .container .contact-sign .flex a {
+        font-size: .8rem;
+    }
 }
