@@ -15,3 +15,4 @@ close.addEventListener("click", () => {
      }, 250)
 })
 
+
