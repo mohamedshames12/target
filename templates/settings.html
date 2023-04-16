@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
       <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
       <link rel="stylesheet" href="{% static 'assets/css/response.css' %}">
-      <title>Target</title>
+      <title>Target || Settings</title>
    </head>
    <body>
 
@@ -27,15 +27,7 @@
                <a href="/about_us">About us</a>
                <a href="/contact_us">Contact us</a>
                <a href="/register">Login</a>
-               
-               {% if user.username %}
-                 <a href="/logout">logout</a>
-               {% else %}
-                 <a href="/logout"></a>
-               {% endif %}
-                  
-                  
-         
+               <a href="/logout">logout</a> 
            </nav>
 
            <a href="/chat" class="chat">Let's Chat</a>
@@ -44,19 +36,6 @@
       </header>
 
    
-      <section class="home"> 
-            <div class="box"> 
-               <div class="contect">
-                  <h1>Build Your Awesome Platform</h1>
-                  <p> GoldenBox studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services. </p>
-                  <a href="/" > Our Services </a>
-               </div>
-               <div class="image">
-                  <img src="{% static 'assets/images/home/IntroHome.png' %}" alt="image" >
-               </div>
-            </div>
-      </section>
-
 
 
       {% comment %} js {% endcomment %}
