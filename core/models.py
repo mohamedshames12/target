@@ -23,11 +23,13 @@ class Profile(models.Model):
     
 class Projects(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    user = models.CharField(max_length=100)
     image = models.ImageField(upload_to='project_images')
     name = models.CharField(max_length=100)
-    descriptoin = models.TextField(blank=True)
+    caption = models.TextField(blank=True)
+    create_at = models.DateTimeField(default=datetime.now)
     
     def __str__(self):
-        return self.admin
+        return self.user
         
     

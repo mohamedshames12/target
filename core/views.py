@@ -3,7 +3,7 @@ from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .models import Profile
+from .models import Profile, Projects
 
 
 # Create your views here.
@@ -128,10 +128,19 @@ def logout(request):
 
 
 # I created a database connection to Create Project
+@login_required(login_url='settings')
 def CreateProject(request):
-    user_obj = User.objects.get(username=request.user.username)
-    user_profile = Profile.objects.get(user=user_obj)
     
-    return render(request, 'CreateProject.html', {'user_profile': user_profile})
+    if request.method == 'POST':
+        user = request.user.username
+        image = request.FILES.get('image')
+        name = request.POST['name']
+        caption = request.POST['caption']
+        new_project = Projects.objects.create(user=user,caption=caption,name=name ,image=image)
+        new_project.save()
+        return redirect('/create-project')
+        
+    else:
+        return render(request, 'CreateProject.html')
 
 

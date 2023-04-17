@@ -276,13 +276,10 @@
         width: 100%;
         margin: auto;
     }
-
-
     
-.our-project .container {
-    grid-template-columns: repeat(auto-fit, 350px);
-}
-
+    .our-project .container {
+        grid-template-columns: repeat(auto-fit, 350px);
+    }
 
 }
 
