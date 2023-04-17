@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/response.css' %}">
+      <title>Target || Our Project</title>
+   </head>
+   <body>
+
+      {% comment %} header {% endcomment %}
+
+      <header>
+            <a href="/"><img src="{% static 'assets/images/home/Target1.png' %}" alt="Target"/></a>
+
+            <nav class="navbar">
+               <a href="/">Home</a>
+               <a href="/services">Services</a>
+               <a href="/our-project">Our Project</a>
+               <a href="/about_us">About us</a>
+               <a href="/contact_us">Contact us</a>
+           </nav>
+
+           <a href="/chat" class="chat">Let's Chat</a>
+           <i class="fas fa-regular fa-bars" id="menu"></i>
+           <i class="fas fa-solid fa-xmark" id="close"></i>
+
+
+            {% if user.username %}
+            <i class="fas fa-user" id="user"></i>
+            <div class="profile">
+               <p>welcome : <span>  {{user.username}} </span></p>
+               <button>  <a href="/settings"> Settings </a></button>
+               <button>  <a href="/logout"> Logout </a></button>
+            </div>
+            {% else %}
+               <a href="/login"><i class="fas fa-user" ></i></a>
+            {% endif %}
+               
+      </header>
+      
+
+
+      <section class="our-project"> 
+        <div class="container">
+           <div class="box">
+              <div class="image">
+                 <img src="{% static 'assets/images/ourproject/Photo4.png' %}" >
+              </div>
+              <div class="contact"> 
+                 <h3>E-Pay App </h3>
+                 <p> Lorem Ipsum is simply dummy text of the printing and typesettin dustry. Lorem Ipsum has been the industry's standard simply </p>
+              </div>
+           </div>
+           <div class="box">
+            <div class="image">
+               <img src="{% static 'assets/images/ourproject/Photo6.png' %}" >
+            </div>
+            <div class="contact"> 
+               <h3> Travel Website Design </h3>
+               <p> Lorem Ipsum is simply dummy text of the printing and typesettin dustry. Lorem Ipsum has been the industry's standard simply </p>
+            </div>
+         </div>
+        </div>
+     </section>
+
+
+      {% comment %} js {% endcomment %}
+      <script src="{% static 'assets/js/script.js' %}"></script>
+   </body>
+</html>

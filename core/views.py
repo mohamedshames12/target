@@ -26,6 +26,10 @@ def platforms(request):
     return render(request, 'platforms.html')
 
 
+# this is functionality to allow you to go platforms page
+def OurProject(request):
+    return render(request, 'OurProject.html')
+
 
 
 # this is functionality to allow you to go settings page

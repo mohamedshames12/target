@@ -853,3 +853,30 @@ footer p {
     align-content: space-around;
     padding: 3rem;
 }
+
+/* our-project */
+
+.our-project{
+    margin-top: 6rem;
+}
+
+.our-project .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 450px);
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-project .container .box .image img {
+    width: 100%;
+}
+
+.our-project .container .box .contact h3{
+    color: #962032;
+    letter-spacing: .5678px;
+}
+
+.our-project .container .box .contact p {
+    font-size: .9rem;
+}
