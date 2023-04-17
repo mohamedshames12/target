@@ -15,4 +15,9 @@ close.addEventListener("click", () => {
      }, 250)
 })
 
+const userBtn = document.getElementById("user");
+const profile = document.querySelector(".profile");
 
+userBtn.addEventListener("click", () => {
+    profile.classList.toggle("active");
+});

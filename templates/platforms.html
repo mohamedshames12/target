@@ -1,0 +1,160 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/response.css' %}">
+      <title>Target || Platforms</title>
+   </head>
+   <body>
+
+      {% comment %} header {% endcomment %}
+
+      <header>
+            <a href="/"><img src="{% static 'assets/images/home/Target1.png' %}" alt="Target"/></a>
+
+            <nav class="navbar">
+               <a href="/">Home</a>
+               <a href="/services">Services</a>
+               <a href="our_Project">Our Project</a>
+               <a href="/about_us">About us</a>
+               <a href="/contact_us">Contact us</a>
+           </nav>
+
+           <a href="/chat" class="chat">Let's Chat</a>
+           <i class="fas fa-regular fa-bars" id="menu"></i>
+           <i class="fas fa-solid fa-xmark" id="close"></i>
+
+
+            {% if user.username %}
+            <i class="fas fa-user" id="user"></i>
+            <div class="profile">
+               <p>welcome : <span>  {{user.username}} </span></p>
+               <button>  <a href="/settings"> Settings </a></button>
+               <button>  <a href="/logout"> Logout </a></button>
+            </div>
+            {% else %}
+               <a href="/login"><i class="fas fa-user" ></i></a>
+            {% endif %}
+               
+      </header>
+      
+
+      <section class="platforms"> 
+         <img src="{% static 'assets/images/platform/platforms.jpg' %}" />
+         <div class="contact">
+            <h2>Lorem ipsum dolor sit amet sit amet</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+               nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+         </div>
+      </section>
+
+      <section> 
+        <div class="images"> 
+            <img src="{% static 'assets/images/home/arrow.png' %}" alt="image" class="left" >
+            <img src="{% static 'assets/images/home/Pluse.png' %}" alt="image" class="right">
+          </div>       
+     </section>
+
+
+     <section class="IT">
+        <div class="container">
+            <div class="image">
+                <img src="{% static 'assets/images/platform/IT Services.jpg' %}" />
+            </div>
+            <div class="contact">
+                <i class="fa-solid fa-code"></i>
+                <h4>System Integration</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et 
+                    magna aliqua. Ut enim ad minim veniam, quis nostr
+                    exercitation ullamco laboris nisi ut aliquip </p>
+            </div>
+        </div>
+    </section>
+
+    <section> 
+        <div class="images"> 
+            <img src="{% static 'assets/images/platform/Elp.png' %}" alt="image" class="left" >
+            <img src="{% static 'assets/images/platform/Vector.png' %}" alt="image" class="right">
+          </div>       
+     </section>
+
+     <section class="IT-System">
+        <div class="container">
+            <div class="contact">
+                <i class="fa-solid fa-chart-simple"></i>
+                <h4>  IT Services</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et 
+                    magna aliqua. Ut enim ad minim veniam, quis nostr
+                    exercitation ullamco laboris nisi ut aliquip </p>
+            </div>
+            <div class="images">
+                <img src="{% static 'assets/images/platform/System Integration.jpg' %}" />
+            </div>
+        </div>
+    </section>
+
+
+    <section> 
+        <div class="images"> 
+            <img src="{% static 'assets/images/home/arrow.png' %}" alt="image" class="left" >
+            <img src="{% static 'assets/images/home/Pluse.png' %}" alt="image" class="right">
+          </div>       
+     </section>
+
+
+     <section class="IT">
+        <div class="container">
+            <div class="image">
+                <img src="{% static 'assets/images/platform/System it.jpg' %}" />
+            </div>
+            <div class="contact">
+                <i class="fa-solid fa-database"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et 
+                    magna aliqua. Ut enim ad minim veniam, quis nostr
+                    exercitation ullamco laboris nisi ut aliquip </p>
+            </div>
+        </div>
+    </section>
+
+
+    {% comment %} contect us {% endcomment %}
+
+    <div style="background-color: #ccc;">
+    <section class="contact-service"> 
+        <div class="container">
+            <div class="box">
+                <h1>Contact us for the service you want to use</h1>
+                <a href=""  class="go-service"> Contact us </a>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    {% comment %} footer {% endcomment %}
+
+    <footer>
+    <a href="/"><img src="{% static 'assets/images/home/Target1.png' %}" alt="Target"/></a>
+    <nav class="navbar">
+        <a href="/">Support</a>
+        <a href="/services">Privacy Policy</a>
+        <a href="our_Project">Terms and Conditions</a>
+    </nav>
+    <p>© 2023 Target, All Rights Reserved</p>
+    </footer>
+
+
+
+
+      {% comment %} js {% endcomment %}
+      <script src="{% static 'assets/js/script.js' %}"></script>
+   </body>
+</html>

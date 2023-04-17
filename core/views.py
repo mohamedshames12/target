@@ -11,12 +11,56 @@ from .models import Profile
 # this is functionality to allow you to go index page
 
 def index(request):
+    # user_obj = User.objects.get(username=request.user.username)
+    # user_profile = Profile.objects.get(user=user_obj)
     return render(request, 'index.html')
+
+
+# this is functionality to allow you to go services page
+def services(request):
+    return render(request, 'services.html')
+
+
+# this is functionality to allow you to go platforms page
+def platforms(request):
+    return render(request, 'platforms.html')
+
+
+
 
 # this is functionality to allow you to go settings page
 @login_required(login_url='settings')
 def settings(request):
-    return render(request, 'settings.html')
+    user_profile = Profile.objects.get(user=request.user)
+    
+    if request.method == 'POST':
+        
+        if request.FILES.get('image') == None:
+            image = user_profile.profileimg
+            phone = request.POST['phone']
+            location = request.POST['location']
+            country = request.POST['country']
+            
+            user_profile.profileimg = image
+            user_profile.phone = phone
+            user_profile.location = location
+            user_profile.country = country
+            user_profile.save()
+        if request.FILES.get('image') != None:
+            image = request.FILES.get('image')
+            phone = request.POST['phone']
+            location = request.POST['location']
+            country = request.POST['country']
+            
+            user_profile.profileimg = image
+            user_profile.phone = phone
+            user_profile.location = location
+            user_profile.country = country
+            user_profile.save()
+        
+        return redirect('settings')
+        
+    return render(request, 'settings.html', {'user_profile': user_profile})
 
 # I created a database connection to register
 def register(request):
@@ -77,3 +121,13 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('login')
+
+
+# I created a database connection to Create Project
+def CreateProject(request):
+    user_obj = User.objects.get(username=request.user.username)
+    user_profile = Profile.objects.get(user=user_obj)
+    
+    return render(request, 'CreateProject.html', {'user_profile': user_profile})
+
+

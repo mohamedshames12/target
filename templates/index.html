@@ -26,37 +26,139 @@
                <a href="our_Project">Our Project</a>
                <a href="/about_us">About us</a>
                <a href="/contact_us">Contact us</a>
-               <a href="/register">Login</a>
-               
-               {% if user.username %}
-                 <a href="/logout">logout</a>
-               {% else %}
-                 <a href="/logout"></a>
-               {% endif %}
-                  
-                  
-         
            </nav>
 
            <a href="/chat" class="chat">Let's Chat</a>
            <i class="fas fa-regular fa-bars" id="menu"></i>
            <i class="fas fa-solid fa-xmark" id="close"></i>
-      </header>
 
-   
-      <section class="home"> 
-            <div class="box"> 
-               <div class="contect">
-                  <h1>Build Your Awesome Platform</h1>
-                  <p> GoldenBox studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services. </p>
-                  <a href="/" > Our Services </a>
-               </div>
-               <div class="image">
-                  <img src="{% static 'assets/images/home/IntroHome.png' %}" alt="image" >
-               </div>
+
+            {% if user.username %}
+            <i class="fas fa-user" id="user"></i>
+            <div class="profile">
+               <p>welcome : <span>  {{user.username}} </span></p>
+               <button>  <a href="/settings"> Settings </a></button>
+               <button>  <a href="/logout"> Logout </a></button>
             </div>
-      </section>
+            {% else %}
+               <a href="/login"><i class="fas fa-user" ></i></a>
+            {% endif %}
+               
+      </header>
+      
+   
+      {% comment %} home  {% endcomment %}
+      <section class="home"> 
+         <div class="box"> 
+            <div class="contect">
+               <h1>Build Your Awesome Platform</h1>
+               <p> Target studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services. </p>
+               <a href="/platforms" > Our Services </a>
+            </div>
+            <div class="image">
+               <img src="{% static 'assets/images/home/IntroHome.png' %}" alt="image" >
+            </div>
+         </div>
+   </section>
 
+
+      {% comment %} video {% endcomment %}
+         <section class="video">
+            <div class="container">
+                  <h1> Why Target Is The Best Choice? </h1>
+                  <p> Watch this one minute video so you understand why you should use our services! </p>
+               </div>
+                  <video  autoplay muted >
+                     <source src="{% static 'assets/videos/about.mp4' %}" type="video/mp4">
+                     <source src="{% static 'assets/videos/about.ogg' %}" type="video/ogg">
+                  </video>
+         </section>
+
+      {% comment %} The Service We Provide For You {% endcomment %}
+         <section class="devs"> 
+            <h1> The Service We Provide For You </h1>
+            <img src="{% static 'assets/images/home/arrow.png' %}" alt="image" class="left" >
+            <img src="{% static 'assets/images/home/Pluse.png' %}" alt="image" class="right">
+            
+            <div class="container">
+            <div class="box"> 
+               <i class="fa-sharp fa-xl  fa-solid fa-code"> </i>
+               <h5> Development </h5>
+               <p> Create a platform with the best and coolest quality from us. </p>
+            </div>
+            <div class="box"> 
+               <i class="fa-xl fa-solid fa-layer-group"> </i>
+               <h5> UI/UX Designer </h5>
+               <p> We provide UI/UX Design services, and of course with the best quality. </p>
+            </div>
+            <div class="box"> 
+               <i class="fas fa-sharp fa-regular fa-pen"></i>
+               <h5> Graphik Designer </h5>
+               <p> We provide Graphic Design services, with the best designers. </p>
+            </div>
+            <div class="box"> 
+               <i class="fas fa-brands fa-dailymotion"></i>
+               <h5> Motion Graphik </h5>
+               <p> Create a platform with the best and coolest quality from us. </p>
+            </div>
+            <div class="box"> 
+               <i class="fa-xl fa-solid fa-camera "> </i>
+               <h5> Photography </h5>
+               <p> We provide Photography services, and of course with the best quality. </p>
+            </div>
+            <div class="box"> 
+               <i class="fa-sharp fa-xl  fa-solid fa-video-camera"> </i>
+               <h5> Videography </h5>
+               <p> Create a platform with the best and coolest quality from us. </p>
+            </div>
+            </div>
+            <a href="/services"  class="go-service"> show more </a>
+         </section>
+
+
+            {% comment %} Our Awesome Portofolio {% endcomment %}
+
+            <section class="portofolio">
+               <h1>Our Awesome Portofolio</h1>
+               <div class="container">
+                  <div class="box">
+                     <img src="{% static 'assets/images/home/image-28.png' %}" alt="image" >
+                  </div>
+                  <div class="box">
+                     <img src="{% static 'assets/images/home/image-29.png' %}" alt="image" >
+                  </div>
+                  <div class="box">
+                     <img src="{% static 'assets/images/home/image-30.png' %}" alt="image" >
+                  </div>
+               </div>
+               <a href=""  class="go-service"> show more </a>
+            </section>
+
+
+            {% comment %} contect us {% endcomment %}
+
+            <div style="background-color: #ccc;">
+               <section class="contact-service"> 
+                  <div class="container">
+                     <div class="box">
+                        <h1>Contact us for the service you want to use</h1>
+                        <a href=""  class="go-service"> Contact us </a>
+                     </div>
+                  </div>
+               </section>
+            </div>
+
+            {% comment %} footer {% endcomment %}
+
+            <footer>
+               <a href="/"><img src="{% static 'assets/images/home/Target1.png' %}" alt="Target"/></a>
+               <nav class="navbar">
+                  <a href="/">Support</a>
+                  <a href="/services">Privacy Policy</a>
+                  <a href="our_Project">Terms and Conditions</a>
+              </nav>
+               <p>© 2023 Target, All Rights Reserved</p>
+            </footer>
 
 
       {% comment %} js {% endcomment %}

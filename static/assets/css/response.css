@@ -14,7 +14,7 @@
         justify-content: center;
         flex-direction: column;
         min-height: 100vh;
-
+        z-index: 1;
     }
 
     header .navbar.active {
@@ -39,6 +39,7 @@
         right: 1.5rem;
         background: transparent;
         font-size: 1.3rem;
+        z-index: 2;
     }
 
     .home .box {
@@ -95,4 +96,186 @@
     .sign .container .contact-sign .flex a {
         font-size: .8rem;
     }
+
+    /* video */
+
+    .video {
+        margin: 2rem auto;
+        display: block;
+    }
+
+    .video .container h1 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .video .container p {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    video {
+        display: flex;
+        margin: auto;
+        width: 97%;
+    }
+
+    /* devs */
+
+    .devs h1 {
+        font-size: 1.6rem;
+    }
+    
+    .devs .left {
+        position: absolute;
+        left: 0;
+        top: 2rem;
+        height: 4rem;
+    
+    }
+    
+    .devs .right {
+        position: absolute;
+        right: .5rem; top: 2rem;
+        height: 2rem;
+    }
+
+    /* portofolio */
+
+    .portofolio h1 {
+        font-size: 1.5rem;
+    }
+    /* contact-service */
+    .contact-service .container .box {
+        display: block;
+    }
+
+    .contact-service .container .box h1 {
+        font-size: 1.3rem;
+    }
+
+    /* footer */
+    footer{
+        display: block;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer img {
+        margin-bottom: 1rem;
+    } 
+
+    footer .navbar {
+        margin-bottom: 1rem;
+    }
+    
+    footer .navbar a {
+        margin-left: .2rem;
+    } 
+    /* settings */
+
+    .basic .container .box {
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+
+
+    .basic .container {
+        display: block;
+        margin: 0;
+    }
+
+    .basic .container .form{
+        display: flex;
+        width: 95%;
+        margin-top: 2rem;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 6rem;
+    }
+
+    .basic .container .form form {
+        padding: 0;
+    }
+
+    .basic .container .form form input,
+    .basic .container .form form label{
+        margin:.3rem 1rem;
+    }
+
+    .basic .container .form form .btns button{
+        margin: 1rem;
+    }
+
+    .basic .container .form form img {
+        margin-top: 1rem;
+    }
+
+    .services .box{
+        display: block;
+    }
+
+    .services .box .image img{
+        display: flex;
+        margin: auto;
+        height: 15rem;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    .services .box .contact{
+        margin: 0 1rem;
+    }
+
+    .services .box .contact h3 {
+        font-size: 1.3rem;
+    }
+
+    .services .box .contact p {
+        letter-spacing: 0;
+        font-size: .8rem;
+    }
+
+    /* platforms */
+    .platforms .contact p {
+        width: 80%;
+        letter-spacing: 0;
+    }
+
+    /* IT */
+
+    .IT .container,
+    .IT-System .container {
+        display: block;
+    }
+
+    .IT .container .image img,
+    .IT-System .container .images img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .IT .container .contact{
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .IT-System .container .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .IT-System .container .contact p {
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
+
 }
+

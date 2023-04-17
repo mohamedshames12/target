@@ -8,8 +8,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
       <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-      <title>Target</title>
+      <link rel="stylesheet" href="{% static 'assets/css/response.css' %}">
+      <title>Target || Services</title>
    </head>
    <body>
 
@@ -20,15 +22,152 @@
 
             <nav class="navbar">
                <a href="/">Home</a>
-               <a href="services">Services</a>
+               <a href="/services">Services</a>
                <a href="our_Project">Our Project</a>
-               <a href="about_us">About us</a>
-               <a href="contact_us">Contact us</a>
+               <a href="/about_us">About us</a>
+               <a href="/contact_us">Contact us</a>
            </nav>
 
-           <a href="/chat">Let's Chat</a>
+           <a href="/chat" class="chat">Let's Chat</a>
+           <i class="fas fa-regular fa-bars" id="menu"></i>
+           <i class="fas fa-solid fa-xmark" id="close"></i>
+
+
+            {% if user.username %}
+            <i class="fas fa-user" id="user"></i>
+            <div class="profile">
+               <p>welcome : <span>  {{user.username}} </span></p>
+               <button>  <a href="/settings"> Settings </a></button>
+               <button>  <a href="/logout"> Logout </a></button>
+            </div>
+            {% else %}
+               <a href="/login"><i class="fas fa-user" ></i></a>
+            {% endif %}
+               
       </header>
+      
+
+      <section class="services"> 
+         <div class="box">
+            <div class="image">
+               <img src="{% static 'assets/images/services/Rectangle 1.png' %}"  alt="image" />
+            </div>
+            <div class="contact">
+               <h3>1. Big Data & Business Analytics</h3>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an type and scrambled it to make a type specimen book. It has survived not only five </p>
+               <a href="/">Read more</a>
+            </div>
+         </div>
+
+         <div class="box">
+            <div class="contact">
+               <h3>2. IoT/ AI/ Robotics</h3>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an type and scrambled it to make a type specimen book. It has survived not only five </p>
+               <a href="/">Read more</a>
+            </div>
+            <div class="image">
+               <img src="{% static 'assets/images/services/Rectangle 2.png' %}"  alt="image" />
+            </div>
+         </div>
+   
+         <div class="box">
+            <div class="image">
+               <img src="{% static 'assets/images/services/Rectangle 3.png' %}"  alt="image" />
+            </div>
+            <div class="contact">
+               <h3>3. Game Development and AR/VR</h3>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an type and scrambled it to make a type specimen book. It has survived not only five </p>
+               <a href="/">Read more</a>
+            </div>
+         </div>
+         
+         <div class="box">
+            <div class="contact">
+               <h3>4. Web and Software Development</h3>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an type and scrambled it to make a type specimen book. It has survived not only five </p>
+               <a href="/">Read more</a>
+            </div>
+            <div class="image">
+               <img src="{% static 'assets/images/services/Rectangle 4.png' %}"  alt="image" />
+            </div>
+
+         </div>
+         
+         <div class="box">
+            <div class="image">
+               <img src="{% static 'assets/images/services/Rectangle 5.png' %}"  alt="image" />
+            </div>
+            <div class="contact">
+               <h3>5. Mobile Application Development</h3>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an type and scrambled it to make a type specimen book. It has survived not only five </p>
+               <a href="/">Read more</a>
+            </div>
+         </div>
+         
+         <div class="box">
+            <div class="contact">
+               <h3>6. SEO</h3>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an type and scrambled it to make a type specimen book. It has survived not only five </p>
+               <a href="/">Read more</a>
+            </div>
+            <div class="image">
+               <img src="{% static 'assets/images/services/Rectangle 6.png' %}"  alt="image" />
+            </div>
+         </div>
+         
+         <div class="box">
+            <div class="image">
+               <img src="{% static 'assets/images/services/Rectangle 7.png' %}"  alt="image" />
+            </div>
+            <div class="contact">
+               <h3>7. Digital Marketing</h3>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an type and scrambled it to make a type specimen book. It has survived not only five </p>
+               <a href="/">Read more</a>
+            </div>
+         </div>
+         
+         <div class="box">
+            <div class="contact">
+               <h3>8. Cyber Security</h3>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an type and scrambled it to make a type specimen book. It has survived not only five </p>
+               <a href="/">Read more</a>
+            </div>
+            <div class="image">
+               <img src="{% static 'assets/images/services/Rectangle 8.png' %}"  alt="image" />
+            </div>
+         </div>
+      </section>
+   
+
+                  {% comment %} contect us {% endcomment %}
+
+      <div style="background-color: #ccc;">
+         <section class="contact-service"> 
+            <div class="container">
+               <div class="box">
+                  <h1>Contact us for the service you want to use</h1>
+                  <a href=""  class="go-service"> Contact us </a>
+               </div>
+            </div>
+         </section>
+      </div>
+
+      {% comment %} footer {% endcomment %}
+
+      <footer>
+         <a href="/"><img src="{% static 'assets/images/home/Target1.png' %}" alt="Target"/></a>
+         <nav class="navbar">
+            <a href="/">Support</a>
+            <a href="/services">Privacy Policy</a>
+            <a href="our_Project">Terms and Conditions</a>
+         </nav>
+         <p>© 2023 Target, All Rights Reserved</p>
+      </footer>
+
+     
 
 
+      {% comment %} js {% endcomment %}
+      <script src="{% static 'assets/js/script.js' %}"></script>
    </body>
 </html>

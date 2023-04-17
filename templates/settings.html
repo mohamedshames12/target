@@ -18,24 +18,81 @@
       {% comment %} header {% endcomment %}
 
       <header>
-            <a href="/"><img src="{% static 'assets/images/home/Target1.png' %}" alt="Target"/></a>
+         <a href="/"><img src="{% static 'assets/images/home/Target1.png' %}" alt="Target"/></a>
 
-            <nav class="navbar">
-               <a href="/">Home</a>
-               <a href="/services">Services</a>
-               <a href="our_Project">Our Project</a>
-               <a href="/about_us">About us</a>
-               <a href="/contact_us">Contact us</a>
-               <a href="/register">Login</a>
-               <a href="/logout">logout</a> 
-           </nav>
+         <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="our_Project">Our Project</a>
+            <a href="/about_us">About us</a>
+            <a href="/contact_us">Contact us</a>
+        </nav>
 
-           <a href="/chat" class="chat">Let's Chat</a>
-           <i class="fas fa-regular fa-bars" id="menu"></i>
-           <i class="fas fa-solid fa-xmark" id="close"></i>
-      </header>
+        <a href="/chat" class="chat">Let's Chat</a>
+        <i class="fas fa-regular fa-bars" id="menu"></i>
+        <i class="fas fa-solid fa-xmark" id="close"></i>
 
+         {% if user.username %}
+          <img src={{user_profile.profileimg.url}} id="user"/>
+         <div class="profile">
+            <p>welcome : <span>  {{user.username}} </span></p>
+            <button>  <a href="/settings"> Settings </a></button>
+            <button>  <a href="/logout"> Logout </a></button>
+         </div>
+         {% else %}
+            <a href="/login"><i class="fas fa-user" ></i></a>
+         {% endif %}
+            
+   </header>
+
+
+   <section class="settings">
+      <p> <a href="/" class="Home">Home</a> / Account Settings for <b> {{user.username}} </b></p>
+   </section>
    
+   <section class="basic">
+         <div class="container"> 
+               <div class="box">
+                  <p>Basic : </p>
+                            
+                     {% if user.username == 'mohamed shames' %}
+                     <a href="/create-project" class="create-project">Create Project</a>
+                     {% endif %}
+                        
+               </div>
+               <div class="form">
+                  <form method="POST" enctype="multipart/form-data">
+                     {% csrf_token %}
+                     <img src={{user_profile.profileimg.url}} />
+                     <label for="name">Name:</label>
+                     <input type="text" name="name" value="{{user.username}}">
+             
+                     <label for="email">Email:</label>
+                     <input type="email" name="email" value="{{user.email}}">
+
+                     <label for="phone">phone:</label>
+                     <input type="number" name="phone" value="{{user_profile.phone}}">
+
+                     <label for="location">location:</label>
+                     <input type="text" name="location" value="{{user_profile.location}}">
+
+                     
+                     <label for="image">image:</label>
+                     <input type="file" name="image" accept="image/*">
+
+             
+                     <label for="country">Country:</label>
+                     <input type="text" name="country" value="{{user_profile.country}}">
+                    
+                     <div class="btns">
+                        <button type="submit" class="cancel"> <a href="/">cancel</a> </button>   
+                        <button type="submit" class="save"> save </button>
+                     </div>
+                 </form>
+               </div>
+         </div>
+   </section>
+
 
 
       {% comment %} js {% endcomment %}
