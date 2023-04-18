@@ -26,9 +26,21 @@ def platforms(request):
     return render(request, 'platforms.html')
 
 
-# this is functionality to allow you to go platforms page
+# this is functionality to allow you to go OurProject page
 def OurProject(request):
-    return render(request, 'OurProject.html')
+    All_Projects = Projects.objects.all()
+    return render(request, 'OurProject.html' , { 'All_Projects': All_Projects})
+
+
+# this is functionality to allow you to go view page
+@login_required(login_url='login')
+def view(request, pk):
+    user_projects = Projects.objects.filter(user=pk)
+    
+    context = {
+        'user_projects': user_projects,
+    }
+    return render(request, 'view.html', context)
 
 
 
@@ -143,4 +155,10 @@ def CreateProject(request):
     else:
         return render(request, 'CreateProject.html')
 
+# this is functionality to allow you to go about us page
+def aboutUs(request):
+    return render(request, 'aboutUs.html')
 
+# this is functionality to allow you to go Contact Us page
+def ContactUs(request):
+    return render(request, 'ContactUs.html')

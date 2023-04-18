@@ -1,0 +1,108 @@
+{% load static %}
+<title>
+    {% block title %}Target || About US{% endblock %}
+</title>
+{% block foo %}
+   {% include "Header.html" %}
+{% endblock %}
+
+
+<section class="about">
+        <div class="box">
+     
+            <div class="contact">
+                <h1> Who <span> we are.... </span> </h1>
+                <p> Target ,we believe in a systematic approach for any project be it complex or simple. We are a group of individuals with various sets of skill sets varies from Digital Marketing. We have our dedicated team for your project which uses various methods such as Agile Scrum & Agile Kanban. We ensure top-notch quality, on-time delivery, and agility for your project. </p>
+            </div>
+            <div class="image"> 
+                <img src="{% static 'assets/images/about/Software integration-pana.png' %}" >
+            </div>
+    </div>
+</section>
+
+<section> 
+    <div class="images"> 
+        <img src="{% static 'assets/images/home/arrow.png' %}" alt="image" class="left" >
+        <img src="{% static 'assets/images/home/Pluse.png' %}" alt="image" class="right">
+      </div>       
+ </section>
+
+
+ <section class="teem">
+    <h1> Meet our team </h1>
+    <div class="container"> 
+        <div class="box">
+            <div class="image"> 
+                <img src="{% static 'assets/images/about/about1.jpg' %}" >
+            </div>
+            <div class="contact">
+                <h5> Lorem Ipsum is simply dummy text of the printing and typesetting  </h5>
+                <p> <span> (UI UX Designer) </span> Haba Ahmed</p>
+            </div>
+         </div>
+         <div class="box">
+            <div class="image"> 
+                <img src="{% static 'assets/images/about/about2.jpg' %}" >
+            </div>
+            <div class="contact">
+                <h5> Lorem Ipsum is simply dummy text of the printing and typesetting  </h5>
+                <p><span> (UI UX Designer) </span> Srar Mohamed</p>
+            </div>
+         </div>
+         <div class="box">
+            <div class="image"> 
+                <img src="{% static 'assets/images/about/about3.jpg' %}" >
+            </div>
+            <div class="contact">
+                <h5> Lorem Ipsum is simply dummy text of the printing and typesetting  </h5>
+                <p> <span> (UI UX Designer) </span> Nermeen Adel</p>
+            </div>
+         </div>
+    </div>
+</section>
+
+
+<section class="engaged">
+    <div class="box">
+        <div class="contact">
+            <h1>Who we are engaged with... </h1>
+            <p> We partner with humble, trusting leaders that think strategically. Businessmen and women who believe in the change they’re making, embrace their mission and want to bring in a partner to accelerate their growth. </p>
+        </div>
+        <div class="images"> 
+            <img src="{% static 'assets/images/about/parteners.png' %}" >
+            <img src="{% static 'assets/images/about/partner2.png' %}" >
+            <img src="{% static 'assets/images/about/partner3.png' %}" >
+        </div>
+</div>
+</section>
+
+
+
+            {% comment %} contect us {% endcomment %}
+
+            <div style="background-color: #ccc;">
+                <section class="contact-service"> 
+                   <div class="container">
+                      <div class="box">
+                         <h1>Contact us for the service you want to use</h1>
+                         <a href=""  class="go-service"> Contact us </a>
+                      </div>
+                   </div>
+                </section>
+             </div>
+ 
+             {% comment %} footer {% endcomment %}
+ 
+             <footer>
+                <a href="/"><img src="{% static 'assets/images/home/Target1.png' %}" alt="Target"/></a>
+                <nav class="navbar">
+                   <a href="/">Support</a>
+                   <a href="/services">Privacy Policy</a>
+                   <a href="our_Project">Terms and Conditions</a>
+               </nav>
+                <p>© 2023 Target, All Rights Reserved</p>
+             </footer>
+ 
+ 
+       {% comment %} js {% endcomment %}
+       <script src="{% static 'assets/js/script.js' %}"></script>

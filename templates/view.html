@@ -1,7 +1,7 @@
 {% load static %}
 
 <title>
-   {% block title %}Target || Our Project{% endblock %}
+   {% block title %}Target || View{% endblock %}
 </title>
 {% block foo %}
   {% include "Header.html" %}
@@ -10,22 +10,22 @@
 
    
 
-
       <section class="our-project"> 
         <div class="container">
          
-         {% for project in All_Projects %}
+            
+      
+                
            <div class="box">
               <div class="image">
-                 <img src="{{project.image.url}}" >
+                 <img src="{{user_project.image.url}}" >
               </div>
               <div class="contact"> 
-                 <h3> {{project.name}} </h3>
-                 <p>  {{project.caption}} </p>
-                 <a href="/view/{{project.name}}"> View </a>
+                 <h3> {{user_projects.name}} </h3>
+                 <p>  {{user_projects.caption}} </p>
               </div>
+
            </div>
-         {% endfor %}
         </div>
      </section>
 
@@ -54,7 +54,7 @@
       <p>© 2023 Target, All Rights Reserved</p>
       </footer>
   
-  
+
 
       {% comment %} js {% endcomment %}
       <script src="{% static 'assets/js/script.js' %}"></script>

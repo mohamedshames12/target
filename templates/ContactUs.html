@@ -1,0 +1,40 @@
+{% load static %}
+
+<title>
+   {% block title %}Target || Contact Us{% endblock %}
+</title>
+{% block foo %}
+  {% include "Header.html" %}
+{% endblock %}
+
+
+
+<section class="contact" style="background-image: url('{% static 'assets/images/contect/Programmer.png' %}');">
+
+
+ <div class="form">
+    <form method="POST">
+      {% csrf_token %}
+      <h1>Contact us</h1>
+      <label for="name">Name:</label>
+      <input type="text" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" required />
+
+      <label for="phonw">phonw:</label>
+      <input type="number" name="phonw" required />
+
+      <label for="message">message:</label>
+      <textarea id="message" name="message" > </textarea>
+
+      <input type="submit" value="Register" class="btn-sign"/>
+    </form>
+  </div>
+
+</section>
+
+
+
+      {% comment %} js {% endcomment %}
+      <script src="{% static 'assets/js/script.js' %}"></script>

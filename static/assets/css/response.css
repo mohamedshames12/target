@@ -281,5 +281,53 @@
         grid-template-columns: repeat(auto-fit, 350px);
     }
 
+    .about {
+        margin-top: 5rem;
+    }
+
+    .about .box{
+        display: block;
+    }
+
+    .about .box .image img {
+        height: 20rem;
+    }
+    
+    .about .box .contact{
+        text-align: center;
+
+    }
+
+    .about .box .contact p {
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+
+    /* engaged */
+    .engaged .box .contact h1 {
+
+        font-size: 1.5rem;
+
+    }
+    
+    .engaged .box .contact p {
+        color: #143642;
+        width: 100%;
+        margin-bottom: .5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .engaged .box .images img {
+        margin-left: .5rem;
+        height: 2rem;
+        margin-top: 1rem;
+    }
+
+    
+    .contact .form  {
+        width: 95%;
+        margin: auto;
+    }
 }
 

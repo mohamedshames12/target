@@ -868,8 +868,14 @@ footer p {
     justify-content: center;
 }
 
+.our-project .container .box  {
+    margin-bottom: 2rem;
+}
 .our-project .container .box .image img {
     width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .our-project .container .box .contact h3{
@@ -879,4 +885,191 @@ footer p {
 
 .our-project .container .box .contact p {
     font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+.our-project .container .box .contact a{
+    padding: 0.4rem 2.5rem;
+    border-radius: 5px;
+    background-color: #a62639;
+    color: #fff;
+}
+
+.our-project .container .box .contact a:hover{
+    background-color: #58040f;
+}
+/* about */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.about .box{
+    display: flex;
+}
+
+.about .box .image {
+    flex: 1;
+}
+
+.about .box .image img {
+    height: 35rem;
+}
+
+.about .box .contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about .box .contact h1 {
+    font-size: 2.2rem;
+}
+
+.about .box .contact span {
+    color: #962032;
+}
+
+.about .box .contact p {
+    width: 80%;
+    letter-spacing: .5678px;
+    line-height: 1.5;
+}
+
+/* teem */
+.teem h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #962032;
+}
+
+.teem .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.teem .container .box {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.teem .container .box .image img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.teem .container .box .contact {
+    padding: 1rem;
+}
+
+.teem .container .box .contact h5 {
+    text-align: center;
+    color: #051920;
+    font-size: .9rem;
+    margin-bottom: .7rem;
+}
+
+.teem .container .box .contact p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #58040f;
+    font-weight: 600;
+}
+
+.teem .container .box .contact span {
+    font-size: .8rem;
+    color: #051920;
+    font-weight: normal;
+}
+
+/* engaged */
+
+.engaged .box{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.engaged .box .contact h1 {
+    color: #051920;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.engaged .box .contact p {
+    color: #143642;
+    width: 70%;
+    margin-bottom: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.engaged .box .images img {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+/* contact */
+
+.contact {
+    max-width: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+}
+
+
+.contact .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.contact .form form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 350px;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.contact .form form h1{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #58040f;
+}
+
+.contact .form form label{
+    margin-bottom: .3rem;
+}
+
+.contact .form form input{
+    margin-bottom: .5rem;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    height: 35px;
+    padding: 0 .5rem;
+}
+
+.contact .form form textarea {
+    height: 100px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 1rem;
+    resize: none;
 }
